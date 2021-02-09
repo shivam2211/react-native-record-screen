@@ -84,6 +84,13 @@ class RecordScreenModule(reactContext: ReactApplicationContext) : ReactContextBa
       hbRecorder!!.setVideoEncoder("DEFAULT");
     }
     hbRecorder!!.isAudioEnabled(mic);
+
+    hbRecorder!!.enableCustomSettings();
+    hbRecorder!!.setVideoFrameRate(18);
+    hbRecorder!!.setVideoBitrate(80000);
+    hbRecorder!!.setOutputFormat("WEBM");
+
+
     reactApplicationContext.addActivityEventListener(mActivityEventListener);
   }
 
