@@ -16,6 +16,7 @@ import com.hbisoft.hbrecorder.HBRecorderListener
 import java.io.File
 import java.io.IOException
 import kotlin.math.ceil
+import android.media.MediaRecorder;
 
 
 class RecordScreenModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext), HBRecorderListener {
@@ -88,8 +89,6 @@ class RecordScreenModule(reactContext: ReactApplicationContext) : ReactContextBa
     hbRecorder!!.enableCustomSettings();
     hbRecorder!!.setVideoFrameRate(18);
     hbRecorder!!.setVideoBitrate(80000);
-    hbRecorder!!.setOutputFormat("WEBM");
-
 
     reactApplicationContext.addActivityEventListener(mActivityEventListener);
   }
